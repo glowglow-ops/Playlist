@@ -246,7 +246,7 @@ footer { border-top:1px solid var(--border); padding:48px 60px; display:flex; ju
         5월, 더스퀘어즈에서 화우회의 플레이리스트를 만나보세요.
       </p>
     </div>
-    <div class="exh-divider"><span>English</span></div>
+    <div class="exh-divider"><span></span></div>
     <div class="exh-en">
       <p>
         The Art exhibition <em>《Playlist》</em> emerges from our history and continuity, inviting each participating artist to select a single track from their personal playlist and translate that music into visual language, or to develop the sensations and narratives it evokes into their work.
@@ -406,6 +406,7 @@ function openModal(a) {
     '<button class="modal-close-btn" onclick="closeModal()">&#10005;</button>';
 
   // Body
+  
   const metaHtml =
     (a.size   ? '<div class="meta-row"><span class="meta-k">크기</span><span class="meta-v">' + a.size   + '</span></div>' : '') +
     (a.medium ? '<div class="meta-row"><span class="meta-k">재료</span><span class="meta-v">' + a.medium + '</span></div>' : '');
