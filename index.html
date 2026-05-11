@@ -236,7 +236,7 @@ footer { border-top:1px solid var(--border); padding:48px 60px; display:flex; ju
   <div class="exhibition-inner">
     <div class="exh-ko">
       <p>
-        1968년 연세대학교 핀슨홀 다락방에서 시작된 화우회는, 59년 동안 이어져 온 연세대학교 유일의 순수미술 중앙동아리입니다. 반세기를 넘는 시간 동안 수많은 동문이 이곳을 거쳐가며 미술에 대한 열정을 나누었고, 지금도 다양한 창작 활동과 워크숍, 교류 프로그램을 통해 긴밀한 공동체를 이어 가고 있습니다. 이번 정기미전 《Playlist》는 이러한 역사와 흐름 위에서, 각 작가가 자신의 플레이리스트에서 한 곡을 선택해 그 음악을 <em>시각 언어로 번역</em>하거나, 그로부터 확장된 감각과 이야기를 작품으로 풀어낸 전시입니다.
+        1968년 연세대학교 핀슨홀 다락방에서 시작된 화우회는, 59년 동안 이어져 온 연세대학교 유일의 순수미술 중앙동아리입니다. 반세기를 넘는 시간 동안 수많은 동문이 이곳을 거쳐가며 미술에 대한 열정을 나누었고, 지금도 다양한 창작 활동과 워크숍, 교류 프로그램을 통해 긴밀한 공동체를 이어 가고 있습니다. 이번 정기미전 《Playlist》는 이러한 역사와 흐름 위에서, 각 작가가 자신의 플레이리스트에서 한 곡을 선택해 <em>그 음악을 시각 언어로 번역하거나, 그로부터 확장된 감각과 이야기를 작품</em>으로 풀어낸 전시입니다.
       </p>
       <p>
         클래식과 인디, K-pop과 재즈, 팝과 국악에 이르기까지 선택된 음악만큼이나 서로 다른 결의 작업들이 한 공간에 모입니다. 선율은 색채로, 가사는 서사로, 리듬은 화면의 구조로 변환되고, 관객은 작품들 사이를 거닐며 각 작업이 품고 있는 보이지 않는 사운드트랙을 따라가게 됩니다. 하나의 작품 앞에서 떠오르는 멜로디와 색감은 관객마다 다르게 형성되며, 다양한 곡만큼 다양한 해석이 공존하는 이 공간에서 각자는 자신의 감각을 따라 새로운 플레이리스트를 완성해 갑니다.
@@ -261,7 +261,16 @@ footer { border-top:1px solid var(--border); padding:48px 60px; display:flex; ju
     </div>
   </div>
 </section>
-
+<section id="panorama">
+  <div class="sec-label">전시장 전경 · Gallery View</div>
+  <div class="pano-wrap" id="panoWrap">
+    <div class="pano-track" id="panoTrack">
+      <img src="images/pano.jpg" alt="전시장 파노라마">
+      <img src="images/pano.jpg" alt="">
+    </div>
+  </div>
+  <div class="pano-hint">drag to explore</div>
+</section>
 <section id="works">
   <div class="works-top">
     <div>
@@ -316,7 +325,7 @@ const A = [
   {id:"w14",group:"회화",title:"Welcome to the show",artist_kr:"이건오",artist_en:"Lee Keon-oh",size:"30×30cm",medium:"Colored pencil on paper",desc:"",song:"The Show — DPR IAN",ytid:"z6qyEfH2D-o"},
   {id:"w15",group:"회화",title:"오늘은 제가 아니요",artist_kr:"Antonina Frolova",artist_en:"Antonina Frolova",size:"30×30cm",medium:"Acrylic on canvas",desc:"This abstract piece is based on a mixed feelings caused by living a day after day in a war. A person gets used to counting the losses of people they loved or were inspired by. As time goes by the acceptance of possibility of getting killed grows, and there is much left to wandering. This piece is inspired by a imprints of a mine shells in the concrete I saw when visited the place I used to live at in Kyiv.\n\n이 추상적인 작품은 전쟁 속에서 하루하루를 살아가면서 생긴 복잡한 감정을 바탕으로 하고 있습니다. 사람은 사랑하거나 영감을 받은 사람들의 손실을 세는 데 익숙해집니다. 시간이 지남에 따라 죽임을 당할 가능성에 대한 수용이 커지고 방황해야 할 것이 많이 남아 있습니다. 이 작품은 제가 키이우에서 살던 곳을 방문했을 때 본 콘크리트 속 지뢰 포탄 자국에서 영감을 받았습니다.",song:"Крихітка feat. хейтспіч — Під весняним дощем",ytid:"2egn13C1wWA"},
   {id:"w16",group:"회화",title:"Fleeting warmth",artist_kr:"Valeria Sánchez Perea",artist_en:"Valeria Sánchez Perea",size:"27×35cm",desc:"This song reminds me of a childhood promise to run away and look for the tomorrow of our dreams. With time we've grown apart, yet the moment when our feelings were the same still burns brightly.",song:"絶体絶命 — Co shu nie",ytid:"P9SX0AMi3To"},
-  {id:"w17",group:"회화",title:"사랑할 수 있을 때 사랑하라",artist_kr:"이석화",artist_en:"Lee Seok-hwa",size:"31.8×40.9cm",medium:"Mixed media on canvas",desc:"프란츠 리스트(Franz Liszt)의 사랑의 꿈(Liebesträum)이라는 제목의 이 곡은 프릴리라트(Freiligrath)의 \"사랑할 수 있을 때 사랑하라(O lieb, so lang du lieben kannst)\"라는 시에서 영감을 받아 탄생했습니다. 그러나 이 음악은 단순히 달콤한 사랑만을 노래하지는 않습니다. 오히려 언젠가 사라질 수밖에 없는 사랑의 덧없음과, 그럼에도 불구하고 온 마음을 다 바쳐 이 순간만큼은 사랑하는 애틋함을 동시에 그려냅니다. 이 곡이 전하는 감정은 모순에 가깝습니다. 남녀 간의 사랑뿐만 아니라, 우리가 살아가며 붙들게 되는 모든 종류의 사랑이 그렇습니다. 각자가 마음속에 품고 있는 어떤 대상이든, 어떤 명분이든, 어떤 희망이든, 삶을 움직이게 하는 원동력이면서도, 동시에 양가적이고, 때로는 지독합니다. 이 곡은 묻습니다. 사라질 것을 알면서도, 우리는 왜 여전히 사랑하는가. 그럼에도 불구하고 마음을 내어주기에, 사랑이라 부르는 것일까요. 여러분은 무언가를, 혹은 누군가를 온 마음을 다해 사랑한 적이 있으신가요.",song:"Liebesträume No. 3 — Franz Liszt",ytid:"XvGQyJ-bzbo"},
+  {id:"w17",group:"회화",title:"사랑할 수 있을 때 사랑하라",artist_kr:"이석화",artist_en:"Lee Seokhwa",size:"31.8×40.9cm",medium:"Mixed media on canvas",desc:"프란츠 리스트(Franz Liszt)의 사랑의 꿈(Liebesträum)이라는 제목의 이 곡은 프릴리라트(Freiligrath)의 \"사랑할 수 있을 때 사랑하라(O lieb, so lang du lieben kannst)\"라는 시에서 영감을 받아 탄생했습니다. 그러나 이 음악은 단순히 달콤한 사랑만을 노래하지는 않습니다. 오히려 언젠가 사라질 수밖에 없는 사랑의 덧없음과, 그럼에도 불구하고 온 마음을 다 바쳐 이 순간만큼은 사랑하는 애틋함을 동시에 그려냅니다. 이 곡이 전하는 감정은 모순에 가깝습니다. 남녀 간의 사랑뿐만 아니라, 우리가 살아가며 붙들게 되는 모든 종류의 사랑이 그렇습니다. 각자가 마음속에 품고 있는 어떤 대상이든, 어떤 명분이든, 어떤 희망이든, 삶을 움직이게 하는 원동력이면서도, 동시에 양가적이고, 때로는 지독합니다. 이 곡은 묻습니다. 사라질 것을 알면서도, 우리는 왜 여전히 사랑하는가. 그럼에도 불구하고 마음을 내어주기에, 사랑이라 부르는 것일까요. 여러분은 무언가를, 혹은 누군가를 온 마음을 다해 사랑한 적이 있으신가요.",song:"Liebesträume No. 3 — Franz Liszt",ytid:"XvGQyJ-bzbo"},
   {id:"w18",group:"회화",title:"다송이가 본 수석(水石)",artist_kr:"황예원",artist_en:"Hwang Yewon",size:"37.5×26.5cm",medium:"Mixed media on paper",desc:"영화 '기생충(Parasite)' 속 정재일의 음악 「믿음의 벨트」는 묻습니다. \"우리가 그토록 굳게 믿는 것들은 과연 얼마나 단단한가?\" 무채색의 고요한 배경 위에, 녹아내리는 돌 하나가 놓여 있습니다. 단단해야 할 것이 흐물거립니다. 영화 속 수석은 불변과 견고함의 상징이지만, 화면 속에서 그것은 서서히 형태를 잃어가고 있습니다. 수석 밑에는 언제부터 흘러내렸는지 모를 피가 흥건합니다. 단단하다고 믿었던 것들이 흘러내릴 때, 그 밑에는 언제나 피가 있습니다. 오른쪽 하단부에는 정체불명의 낙서가 있습니다. 제시카 선생님(배우 박소담)이 진단한 스키조프레니아존과 비슷한 형상입니다. 아! 이 그림은 아마도 영화 속 다송이가 그린 그림인가 봅니다. 어른들도 알지 못하는 진실을 다송이는 보는 듯합니다.",song:"믿음의 벨트 — 정재일",ytid:"jZIVYXicHHI"},
   {id:"w19",group:"회화",title:"antifeeze",artist_kr:"이지민",artist_en:"Lee Jimin",size:"22×22cm",medium:"Acrylic on canvas",desc:"우리 둘은 얼어붙지 않을거야 얼어붙은 아스팔트 도로위로",song:"Antifreeze — 검정치마",ytid:"PGADim6UzHE"},
   {id:"w20",group:"회화",title:"꿈의 표정",artist_kr:"조예진",artist_en:"Jo Yejin",size:"29.7×21cm",medium:"Colored pencil and pastel on paper panel",desc:"난 너를 전부 알 순 없어도 지난날 네가 꾸었던 꿈의 표정을 봤어 더 선명한",song:"꿈의 표정 — 다브다",ytid:"VRIUxGmsmxI"},
