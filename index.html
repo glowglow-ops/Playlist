@@ -170,6 +170,14 @@ footer { border-top:1px solid var(--border); padding:48px 60px; display:flex; ju
   footer { flex-direction:column; gap:24px; align-items:flex-start; } .footer-right { text-align:left; }
   .works-grid { grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:8px; }
 }
+#panorama { border-top:1px solid var(--border); padding:88px 0; }
+#panorama .sec-label { padding:0 60px; margin-bottom:32px; }
+.pano-wrap { position:relative; overflow:hidden; height:340px; cursor:grab; user-select:none; }
+.pano-wrap:active { cursor:grabbing; }
+.pano-track { display:flex; height:100%; will-change:transform; }
+.pano-track img { height:100%; width:auto; flex-shrink:0; display:block; pointer-events:none; }
+.pano-hint { text-align:center; margin-top:16px; font-size:11px; color:var(--text-muted); letter-spacing:0.15em; text-transform:uppercase; }
+@media(max-width:768px){ .pano-wrap{ height:200px; } #panorama .sec-label{ padding:0 20px; } }
 </style>
 </head>
 <body>
@@ -545,6 +553,29 @@ function closeModal() {
 backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
+(function(){
+  const wrap = document.getElementById('panoWrap');
+  const track = document.getElementById('panoTrack');
+  if (!wrap || !track) return;
+  let x = 0, speed = 0.4, dragging = false, startX = 0, startPos = 0, paused = false;
+  function getMax(){ return track.children[0].offsetWidth; }
+  function tick(){
+    if (!dragging && !paused) x += speed;
+    if (x >= getMax()) x -= getMax();
+    if (x < 0) x += getMax();
+    track.style.transform = 'translateX(' + (-x) + 'px)';
+    requestAnimationFrame(tick);
+  }
+  wrap.addEventListener('mouseenter', () => paused = true);
+  wrap.addEventListener('mouseleave', () => { paused = false; dragging = false; });
+  wrap.addEventListener('mousedown', e => { dragging = true; startX = e.clientX; startPos = x; });
+  wrap.addEventListener('mousemove', e => { if (dragging) x = startPos - (e.clientX - startX); });
+  wrap.addEventListener('mouseup', () => dragging = false);
+  wrap.addEventListener('touchstart', e => { dragging=true; startX=e.touches[0].clientX; startPos=x; paused=true; },{passive:true});
+  wrap.addEventListener('touchmove', e => { if(dragging) x=startPos-(e.touches[0].clientX-startX); },{passive:true});
+  wrap.addEventListener('touchend', () => { dragging=false; paused=false; });
+  tick();
+})();
 </script>
 </body>
 </html>
